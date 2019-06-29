@@ -6,18 +6,36 @@ body {
   padding: 0;
   margin: 0 auto;
   font-family: 'Lato', sans-serif;
-
 }
+
+
+img {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 5vh;
+    right: 5vw;
+}
+h1 {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 7rem;
+    position: absolute;
+    top: 10vh;
+    right: 1vw;
+    margin: 0 !important;
+}
+
 .container {
-    top: 5%;
-    left: 5%;
-    width: 80%;
-    height: 90%;
+    top: 5vh;
+    left: 5vw;
+    width: 85vw;
+    height: 90vh;
     position: absolute;
     display: flex;
     flex-direction: row;
     .item {
-        width: calc(100%/8);
+        width: calc(100vw/8);
         margin: 1px;
     }
 }
