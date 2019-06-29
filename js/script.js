@@ -1,31 +1,40 @@
 // Animation time
 var time = 300;
-var small = 0.01;
+var small = 0.02;
 var large = 0.70;
 var reset = true;
 
 $(".overlay").hover(
     function() {
         reset = true;
-        $(".item").animate({width: $(window).width()* 0.125}, time);
+        $(".item").animate({width: $(window).width()* 0.125}, time - 200);
+        $(".item").children().css({'opacity': 0});
     }
 )
 $(".item").hover(
     function() {
         if(reset == true) {
-            $(this).animate({width: $(window).width()* 0.2}, time);
+            $(this).animate({width: $(window).width()* 0.2}, time - 200);
         }
     },
     function() {
         if(reset == true) {
-            $(".item").animate({width: $(window).width()* 0.125}, time);
+            $(".item").animate({width: $(window).width()* 0.125}, time - 200);
         }
+    }
+)
+$(".item").click(
+    function() {
+        $(".item").children().css({'opacity': 0});
+        $(this).children().css({'opacity': 1});
     }
 )
 
 $(".item1").click( 
     function() {
         reset = false;
+        
+
         $(".item1").animate({width: $(window).width()* large}, time);
         $(".item2").animate({width: $(window).width()* small}, time);
         $(".item3").animate({width: $(window).width()* small}, time);
