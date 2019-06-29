@@ -36,6 +36,7 @@ h1 {
     flex-direction: row;
     .item {
         width: calc(100vw/8);
-        margin: 1px;
+        min-width: 50px;
+        // margin: 1px;
     }
 }

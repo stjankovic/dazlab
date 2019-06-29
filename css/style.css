@@ -74,6 +74,6 @@ h1 {
 
 .container .item {
   width: calc(100vw/8);
-  margin: 1px;
+  min-width: 50px;
 }
 /*# sourceMappingURL=style.css.map */
