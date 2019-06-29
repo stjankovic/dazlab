@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import 'colors.scss';
+@import 'items.scss';
+
+body {
+  padding: 0;
+  margin: 0 auto;
+  font-family: 'Lato', sans-serif;
+
+}
+.container {
+    top: 5%;
+    left: 5%;
+    width: 80%;
+    height: 90%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    .item {
+        width: calc(100%/8);
+        margin: 1px;
+    }
+}
