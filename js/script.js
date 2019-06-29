@@ -2,174 +2,129 @@
 var time = 300;
 var small = 0.01;
 var large = 0.70;
-var active = false;
-var delay = 50;
+var reset = true;
 
-// Item 1
-$(".item1").hover(
-    function(e) {
-        if(active == false) {
-            active = true;
-            setTimeout( function() {
-                $(".item1").animate({width: $(window).width()* large}, time);
-                $(".item2").animate({width: $(window).width()* small}, time);
-                $(".item3").animate({width: $(window).width()* small}, time);
-                $(".item4").animate({width: $(window).width()* small}, time);
-                $(".item5").animate({width: $(window).width()* small}, time);
-                $(".item6").animate({width: $(window).width()* small}, time);
-                $(".item7").animate({width: $(window).width()* small}, time);
-                $(".item8").animate({width: $(window).width()* small}, time);
-            }, delay);
+$(".overlay").hover(
+    function() {
+        reset = true;
+        $(".item").animate({width: $(window).width()* 0.125}, time);
+    }
+)
+$(".item").hover(
+    function() {
+        if(reset == true) {
+            $(this).animate({width: $(window).width()* 0.2}, time);
         }
     },
-    function(e) {
-        active = false;
-    }
-);
-// Item 2
-$(".item2").hover(
-    function(e) {
-        if(active == false) {
-            active = true;
-            setTimeout( function() {
-                $(".item1").animate({width: $(window).width()* small}, time);
-                $(".item2").animate({width: $(window).width()* large}, time);
-                $(".item3").animate({width: $(window).width()* small}, time);
-                $(".item4").animate({width: $(window).width()* small}, time);
-                $(".item5").animate({width: $(window).width()* small}, time);
-                $(".item6").animate({width: $(window).width()* small}, time);
-                $(".item7").animate({width: $(window).width()* small}, time);
-                $(".item8").animate({width: $(window).width()* small}, time);
-            }, delay);
+    function() {
+        if(reset == true) {
+            $(".item").animate({width: $(window).width()* 0.125}, time);
         }
-    },
-    function(e) {
-        active = false;
+    }
+)
+
+$(".item1").click( 
+    function() {
+        reset = false;
+        $(".item1").animate({width: $(window).width()* large}, time);
+        $(".item2").animate({width: $(window).width()* small}, time);
+        $(".item3").animate({width: $(window).width()* small}, time);
+        $(".item4").animate({width: $(window).width()* small}, time);
+        $(".item5").animate({width: $(window).width()* small}, time);
+        $(".item6").animate({width: $(window).width()* small}, time);
+        $(".item7").animate({width: $(window).width()* small}, time);
+        $(".item8").animate({width: $(window).width()* small}, time);
     }
 );
-// Item 3
-$(".item3").hover(
-    function(e) {
-        if(active == false) {
-            active = true;
-            setTimeout( function() {
-                $(".item1").animate({width: $(window).width()* small}, time);
-                $(".item2").animate({width: $(window).width()* small}, time);
-                $(".item3").animate({width: $(window).width()* large}, time);
-                $(".item4").animate({width: $(window).width()* small}, time);
-                $(".item5").animate({width: $(window).width()* small}, time);
-                $(".item6").animate({width: $(window).width()* small}, time);
-                $(".item7").animate({width: $(window).width()* small}, time);
-                $(".item8").animate({width: $(window).width()* small}, time);
-            }, delay);
-        }
-    },
-    function(e) {
-        active = false;
+$(".item2").click( 
+    function() {
+        reset = false;
+        $(".item1").animate({width: $(window).width()* small}, time);
+        $(".item2").animate({width: $(window).width()* large}, time);
+        $(".item3").animate({width: $(window).width()* small}, time);
+        $(".item4").animate({width: $(window).width()* small}, time);
+        $(".item5").animate({width: $(window).width()* small}, time);
+        $(".item6").animate({width: $(window).width()* small}, time);
+        $(".item7").animate({width: $(window).width()* small}, time);
+        $(".item8").animate({width: $(window).width()* small}, time);
     }
 );
-// Item 4
-$(".item4").hover(
-    function(e) {
-        if(active == false) {
-            active = true;
-            setTimeout( function() {
-                $(".item1").animate({width: $(window).width()* small}, time);
-                $(".item2").animate({width: $(window).width()* small}, time);
-                $(".item3").animate({width: $(window).width()* small}, time);
-                $(".item4").animate({width: $(window).width()* large}, time);
-                $(".item5").animate({width: $(window).width()* small}, time);
-                $(".item6").animate({width: $(window).width()* small}, time);
-                $(".item7").animate({width: $(window).width()* small}, time);
-                $(".item8").animate({width: $(window).width()* small}, time);
-            }, delay);
-        }
-    },
-    function(e) {
-        active = false;
+$(".item3").click( 
+    function() {
+        reset = false;
+        $(".item1").animate({width: $(window).width()* small}, time);
+        $(".item2").animate({width: $(window).width()* small}, time);
+        $(".item3").animate({width: $(window).width()* large}, time);
+        $(".item4").animate({width: $(window).width()* small}, time);
+        $(".item5").animate({width: $(window).width()* small}, time);
+        $(".item6").animate({width: $(window).width()* small}, time);
+        $(".item7").animate({width: $(window).width()* small}, time);
+        $(".item8").animate({width: $(window).width()* small}, time);
     }
 );
-// Item 5
-$(".item5").hover(
-    function(e) {
-        if(active == false) {
-            active = true;
-            setTimeout( function() {
-                $(".item1").animate({width: $(window).width()* small}, time);
-                $(".item2").animate({width: $(window).width()* small}, time);
-                $(".item3").animate({width: $(window).width()* small}, time);
-                $(".item4").animate({width: $(window).width()* small}, time);
-                $(".item5").animate({width: $(window).width()* large}, time);
-                $(".item6").animate({width: $(window).width()* small}, time);
-                $(".item7").animate({width: $(window).width()* small}, time);
-                $(".item8").animate({width: $(window).width()* small}, time);
-            }, delay);
-        }
-    },
-    function(e) {
-        active = false;
+$(".item4").click( 
+    function() {
+        reset = false;
+        $(".item1").animate({width: $(window).width()* small}, time);
+        $(".item2").animate({width: $(window).width()* small}, time);
+        $(".item3").animate({width: $(window).width()* small}, time);
+        $(".item4").animate({width: $(window).width()* large}, time);
+        $(".item5").animate({width: $(window).width()* small}, time);
+        $(".item6").animate({width: $(window).width()* small}, time);
+        $(".item7").animate({width: $(window).width()* small}, time);
+        $(".item8").animate({width: $(window).width()* small}, time);
     }
 );
-// Item 6
-$(".item6").hover(
-    function(e) {
-        if(active == false) {
-            active = true;
-            setTimeout( function() {
-                $(".item1").animate({width: $(window).width()* small}, time);
-                $(".item2").animate({width: $(window).width()* small}, time);
-                $(".item3").animate({width: $(window).width()* small}, time);
-                $(".item4").animate({width: $(window).width()* small}, time);
-                $(".item5").animate({width: $(window).width()* small}, time);
-                $(".item6").animate({width: $(window).width()* large}, time);
-                $(".item7").animate({width: $(window).width()* small}, time);
-                $(".item8").animate({width: $(window).width()* small}, time);
-            }, delay);
-        }
-    },
-    function(e) {
-        active = false;
+$(".item5").click( 
+    function() {
+        reset = false;
+        $(".item1").animate({width: $(window).width()* small}, time);
+        $(".item2").animate({width: $(window).width()* small}, time);
+        $(".item3").animate({width: $(window).width()* small}, time);
+        $(".item4").animate({width: $(window).width()* small}, time);
+        $(".item5").animate({width: $(window).width()* large}, time);
+        $(".item6").animate({width: $(window).width()* small}, time);
+        $(".item7").animate({width: $(window).width()* small}, time);
+        $(".item8").animate({width: $(window).width()* small}, time);
     }
 );
-// Item 7
-$(".item7").hover(
-    function(e) {
-        if(active == false) {
-            active = true;
-            setTimeout( function() {
-                $(".item1").animate({width: $(window).width()* small}, time);
-                $(".item2").animate({width: $(window).width()* small}, time);
-                $(".item3").animate({width: $(window).width()* small}, time);
-                $(".item4").animate({width: $(window).width()* small}, time);
-                $(".item5").animate({width: $(window).width()* small}, time);
-                $(".item6").animate({width: $(window).width()* small}, time);
-                $(".item7").animate({width: $(window).width()* large}, time);
-                $(".item8").animate({width: $(window).width()* small}, time);
-            }, delay);
-        }
-    },
-    function(e) {
-        active = false;
+$(".item6").click( 
+    function() {
+        reset = false;
+        $(".item1").animate({width: $(window).width()* small}, time);
+        $(".item2").animate({width: $(window).width()* small}, time);
+        $(".item3").animate({width: $(window).width()* small}, time);
+        $(".item4").animate({width: $(window).width()* small}, time);
+        $(".item5").animate({width: $(window).width()* small}, time);
+        $(".item6").animate({width: $(window).width()* large}, time);
+        $(".item7").animate({width: $(window).width()* small}, time);
+        $(".item8").animate({width: $(window).width()* small}, time);
     }
 );
-// Item 7
-$(".item7").hover(
-    function(e) {
-        if(active == false) {
-            active = true;
-            setTimeout( function() {
-                $(".item1").animate({width: $(window).width()* small}, time);
-                $(".item2").animate({width: $(window).width()* small}, time);
-                $(".item3").animate({width: $(window).width()* small}, time);
-                $(".item4").animate({width: $(window).width()* small}, time);
-                $(".item5").animate({width: $(window).width()* small}, time);
-                $(".item6").animate({width: $(window).width()* small}, time);
-                $(".item7").animate({width: $(window).width()* small}, time);
-                $(".item8").animate({width: $(window).width()* large}, time);
-            }, delay);
-        }
-    },
-    function(e) {
-        active = false;
+$(".item7").click( 
+    function() {
+        reset = false;
+        $(".item1").animate({width: $(window).width()* small}, time);
+        $(".item2").animate({width: $(window).width()* small}, time);
+        $(".item3").animate({width: $(window).width()* small}, time);
+        $(".item4").animate({width: $(window).width()* small}, time);
+        $(".item5").animate({width: $(window).width()* small}, time);
+        $(".item6").animate({width: $(window).width()* small}, time);
+        $(".item7").animate({width: $(window).width()* large}, time);
+        $(".item8").animate({width: $(window).width()* small}, time);
     }
 );
+$(".item8").click( 
+    function() {
+        reset = false;
+        $(".item1").animate({width: $(window).width()* small}, time);
+        $(".item2").animate({width: $(window).width()* small}, time);
+        $(".item3").animate({width: $(window).width()* small}, time);
+        $(".item4").animate({width: $(window).width()* small}, time);
+        $(".item5").animate({width: $(window).width()* small}, time);
+        $(".item6").animate({width: $(window).width()* small}, time);
+        $(".item7").animate({width: $(window).width()* small}, time);
+        $(".item8").animate({width: $(window).width()* large}, time);
+    }
+);
+
