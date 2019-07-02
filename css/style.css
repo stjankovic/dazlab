@@ -36,6 +36,8 @@ body {
   margin: 0 auto;
   font-family: 'Lato', sans-serif;
   overflow-y: hidden !important;
+  overflow-x: hidden !important;
+  cursor: default !important;
 }
 
 nav img {
@@ -69,8 +71,8 @@ nav h1 {
 .container {
   z-index: 10;
   top: 5vh;
-  left: 5vw;
-  width: 85vw;
+  left: 8vw;
+  width: 80vw;
   height: 90vh;
   position: absolute;
   display: -webkit-box;
