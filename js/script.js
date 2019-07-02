@@ -45,6 +45,7 @@ $(".item").click(
             $(".item").stop().animate({width: $(window).width()* normal}, time - 200);
             $(".item").children().css({'opacity': 0});
             count = 0;
+            reset = true;
         }
     }
 );
