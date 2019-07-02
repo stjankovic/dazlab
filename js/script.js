@@ -9,8 +9,9 @@ $(".overlay").hover(
     function() {
         reset = true;
         count = 0;
-        $(".item").stop().animate({width: $(window).width()* normal}, time - 100);
+        $(".item").animate({width: $(window).width()* normal}, time - 100);
         $(".item").children().css({'opacity': 0});
+        $(".item").clearQueue();
     }
 )
 $(".item").hover(
