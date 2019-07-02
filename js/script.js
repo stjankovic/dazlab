@@ -4,14 +4,10 @@ var normal = 0.125;
 var medium = 0.25;
 var large = 0.70;
 var reset = true;
-
-var ccount1 = 0;
-
-
+var count = 0;
 $(".overlay").hover(
     function() {
         reset = true;
-        ccount1 = 0;
         $(".item").stop().animate({width: $(window).width()* normal}, time - 100);
         $(".item").children().css({'opacity': 0});
     }
@@ -30,7 +26,6 @@ $(".item").hover(
         }
     }
 )
-
 $(".item").click(
     function() {
         $(".item").children().css({'opacity': 0});
@@ -38,20 +33,18 @@ $(".item").click(
         
     }
 )
-
 $(".item").click( 
     function() {
+        count++;
         reset = false;
-        ccount1++;
-        if(ccount1 == 1) {
+        if(count == 1) {
             $(".item").stop().animate({width: $(window).width()* small}, time - 200);
             $(this).stop().animate({width: $(window).width()* large}, time - 200);
         }
-        else if(ccount1 == 2) {
-            $(".item").animate({width: $(window).width()* normal}, time - 200);
+        else if(count == 2) {
+            $(".item").stop().animate({width: $(window).width()* normal}, time - 200);
             $(".item").children().css({'opacity': 0});
-            ccount1 = 0;
-            reset = true;
+            count = 0;
         }
     }
 );
