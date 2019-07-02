@@ -1,0 +1,15 @@
+@media screen and (max-width: 800px) {
+  .container {
+    top: 15vh !important;
+    height: 80vh !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .item {
+    width: 100%;
+    height: 10vh;
+  }
+}
+/*# sourceMappingURL=mobile.css.map */
