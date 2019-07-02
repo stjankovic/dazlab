@@ -5,6 +5,7 @@ var medium = 0.25;
 var large = 0.70;
 var reset = true;
 var count = 0;
+
 $(".overlay").hover(
     function() {
         reset = true;
