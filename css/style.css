@@ -40,12 +40,16 @@ body {
   cursor: default !important;
 }
 
+nav {
+  float: right;
+}
+
 nav img {
   width: 5vh;
   height: 5vh;
   position: absolute;
   top: 5vh;
-  right: 80px;
+  right: 5vw;
   z-index: 999;
 }
 
@@ -54,8 +58,8 @@ nav h1 {
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
   text-orientation: mixed;
-  font-size: 7rem;
-  position: absolute;
+  font-size: 7vw;
+  position: relative;
   top: 15vh;
   right: 20px;
   margin: 0 !important;
@@ -136,6 +140,17 @@ nav h1 {
   padding: 0 !important;
   margin: 0 !important;
   right: 5vh;
+  text-align: center;
+}
+
+.links-mobile {
+  display: block !important;
+  color: white;
+  font-size: 7vh;
+  text-decoration: none;
+  width: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
   text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

@@ -10,12 +10,10 @@
     -webkit-writing-mode: horizontal-tb;
         -ms-writing-mode: lr-tb;
             writing-mode: horizontal-tb;
-    top: 4vh;
-    font-size: 3rem;
-    right: auto;
-    left: 14vw;
-    text-align: left;
-    width: 50vw;
+    top: 5.5vh;
+    font-size: 5vh;
+    position: absolute;
+    left: 12vw;
   }
   .container {
     top: 15vh !important;
