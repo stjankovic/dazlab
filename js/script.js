@@ -173,10 +173,10 @@ function openNav() {
     );
     
     AnimateRotate('.container', -90);
-    moveItem('nav > img', 0.3, 0.1, 0.15);
+    moveItem('nav > img', 0.31, 0.1, 0.16);
     currentAngle = 0;
     AnimateRotate('nav > h1', -90);
-    moveItem('nav > h1', 0, 0.1, 0.78);
+    moveRotatedItem('nav > h1');
 }
 // Function to close the navigation
 function closeNav() {
@@ -225,15 +225,10 @@ function hideItems() {
     $(".item7").animate({ width: 0}, 200);
     $(".item7").fadeOut( 100, function() { });
 }
-$('nav').click(function() {
-    showLinks();
-})
 function showLinks() {
     $('a').css({'opacity': 1});
     $('a').removeClass('hidden');
     $('a').addClass('links');
-
-   
 }
 // Generatic animation function for movement
 function moveItem(item, left, right, top) {
@@ -241,6 +236,15 @@ function moveItem(item, left, right, top) {
         left: $(window).width() * left,
         top: $(window).height() * top,
         right: $(window).width() * right
+    },
+        400
+    );
+}
+function moveRotatedItem(item) {
+    $(item).animate({
+        top: $(window).width() * -0.01,
+        right: $(window).width() * 0.5,
+
     },
         400
     );
