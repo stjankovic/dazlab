@@ -1,4 +1,7 @@
 @media screen and ( max-width: 800px ) {
+    .center-align-mobile {
+        text-align: center !important;
+    }
     nav {
         img {
             top: calc(6.5vh);
@@ -25,9 +28,22 @@
             // Optional
             // margin: 1px;
             // border-radius: 10px;
+            .content {
+                width: 90%;
+                left: 5%;
+                h1 {
+                    font-size: 1.7rem;
+                    text-align: center;
+                }
+                p {
+                    font-size: 1.1rem;
+                    text-align: justify;
+                }
+            }
         }
     }
 
+    
 
 
 
