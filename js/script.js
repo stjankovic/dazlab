@@ -91,6 +91,7 @@ function menuDesktop() {
                 fullWidth();
                 console.log(`Nav open: ${navOpen}`);
                 closeNav();
+                
             }
             
         }
@@ -156,10 +157,11 @@ function fullWidth() {
     );
     
 }
-
+// Function to open the navigation
 function openNav() {
     $('.item').removeClass('min-w');
     hideItems();
+    showLinks();
     $(".container").stop().animate({
         width: $(window).width() * 0.2,
         height: $(window).width() * 0.4,
@@ -175,8 +177,9 @@ function openNav() {
     AnimateRotate('nav > h1', -90);
     moveItem('nav > h1', 0, 0.1, 0.78);
 }
+// Function to close the navigation
 function closeNav() {
-
+    $('.item').addClass('min-w');
     moveItem('nav > img', 0.93, 0.05, 0.05);
     AnimateRotate('nav > h1', 0);
     moveItem('nav > h1', 0.93, 0.01, 0.15);
@@ -191,24 +194,8 @@ function closeNav() {
         500
     );
     showItems();
-    
-
- }
-
-function AnimateRotate(item, angle) {
-    var $elem = $(item);
-    $({deg: currentAngle}).animate({deg: angle}, {
-        duration: 500,
-        step: function(now) {
-            $elem.css({
-                transform: 'rotate(' + now + 'deg)'
-            });
-        }
-
-    });
-    currentAngle = angle;
 }
-
+// Display odd items
 function showItems() {
     $(".item1").fadeIn( 500, function() { });
     $(".item1").animate({width: $(window).width()* normal}, time - 200);
@@ -221,7 +208,9 @@ function showItems() {
     
     $(".item7").fadeIn( 500, function() { });
     $(".item7").animate({width: $(window).width()* normal}, time - 200);
+    
 }
+// Hide odd items
 function hideItems() {
     $(".item1").animate({ width: 0}, 200);
     $(".item1").fadeOut( 100, function() { });
@@ -235,7 +224,17 @@ function hideItems() {
     $(".item7").animate({ width: 0}, 200);
     $(".item7").fadeOut( 100, function() { });
 }
+$('nav').click(function() {
+    showLinks();
+})
+function showLinks() {
+    $('a').css({'opacity': 1});
+    $('a').removeClass('hidden');
+    $('a').addClass('links');
 
+   
+}
+// Generatic animation function for movement
 function moveItem(item, left, right, top) {
     $(item).animate({
         left: $(window).width() * left,
@@ -245,6 +244,19 @@ function moveItem(item, left, right, top) {
         400
     );
 }
-
+// Generic animation rotation function
+function AnimateRotate(item, angle) {
+    var $elem = $(item);
+    $({deg: currentAngle}).animate({deg: angle}, {
+        duration: 500,
+        step: function(now) {
+            $elem.css({
+                transform: 'rotate(' + now + 'deg)'
+            });
+        }
+    });
+    currentAngle = angle;
+}
+// Made by:
 console.log(`Made by Stefan Jankovic`);
 console.log(`@stjankovic`);

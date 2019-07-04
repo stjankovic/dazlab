@@ -117,4 +117,25 @@ nav h1 {
 .min-w {
   min-width: 30px;
 }
+
+.hidden {
+  display: hidden;
+}
+
+.links {
+  display: block !important;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: white;
+  font-size: 5vh;
+  text-decoration: none;
+  height: 100%;
+  width: 80%;
+  padding: 0 !important;
+  margin: 0 !important;
+  right: 5vh;
+  text-align: center;
+}
 /*# sourceMappingURL=style.css.map */
