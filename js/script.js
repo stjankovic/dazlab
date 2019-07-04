@@ -110,6 +110,7 @@ function menuDesktop() {
 }
 function fullWidth() {
     $('.item').addClass('min-w');
+    $('a').addClass('hidden');
     $(".overlay").hover(
         function() {
             if(navOpen == false) {
