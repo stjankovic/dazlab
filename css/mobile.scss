@@ -14,7 +14,7 @@
             right: auto;
             left: 14vw;
             text-align: left;
-            width: 90vw;
+            width: 50vw;
         }
     }
     .container {
@@ -31,13 +31,16 @@
             .content {
                 width: 90%;
                 left: 5%;
+                overflow-y: hidden !important;
                 h1 {
                     font-size: 1.7rem;
                     text-align: center;
+                    
                 }
                 p {
                     font-size: 1.1rem;
                     text-align: justify;
+                  
                 }
             }
         }

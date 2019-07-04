@@ -15,7 +15,7 @@
     right: auto;
     left: 14vw;
     text-align: left;
-    width: 90vw;
+    width: 50vw;
   }
   .container {
     top: 15vh !important;
@@ -33,6 +33,7 @@
   .container .item .content {
     width: 90%;
     left: 5%;
+    overflow-y: hidden !important;
   }
   .container .item .content h1 {
     font-size: 1.7rem;
