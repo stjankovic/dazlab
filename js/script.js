@@ -108,7 +108,7 @@ function menuDesktop() {
     )
 }
 function fullWidth() {
-
+    $('.item').addClass('min-w');
     $(".overlay").hover(
         function() {
             if(navOpen == false) {
@@ -158,6 +158,7 @@ function fullWidth() {
 }
 
 function openNav() {
+    $('.item').removeClass('min-w');
     hideItems();
     $(".container").stop().animate({
         width: $(window).width() * 0.2,
@@ -165,14 +166,22 @@ function openNav() {
         left: $(window).width() * 0.4,
         top: $(window).height() * 0.05
     },
-        500
+        300
     );
     
-    AnimateRotate(-90);
-   
+    AnimateRotate('.container', -90);
+    moveItem('nav > img', 0.3, 0.1, 0.15);
+    currentAngle = 0;
+    AnimateRotate('nav > h1', -90);
+    moveItem('nav > h1', 0, 0.1, 0.78);
 }
 function closeNav() {
-    AnimateRotate(0);
+
+    moveItem('nav > img', 0.93, 0.05, 0.05);
+    AnimateRotate('nav > h1', 0);
+    moveItem('nav > h1', 0.93, 0.01, 0.15);
+    currentAngle = -90;
+    AnimateRotate('.container', 0);
     $(".container").animate({
         width: $(window).width() * 0.8,
         height: $(window).height() * 0.9,
@@ -182,10 +191,12 @@ function closeNav() {
         500
     );
     showItems();
+    
+
  }
 
-function AnimateRotate(angle) {
-    var $elem = $('.container');
+function AnimateRotate(item, angle) {
+    var $elem = $(item);
     $({deg: currentAngle}).animate({deg: angle}, {
         duration: 500,
         step: function(now) {
@@ -212,17 +223,27 @@ function showItems() {
     $(".item7").animate({width: $(window).width()* normal}, time - 200);
 }
 function hideItems() {
-    $(".item1").animate({ width: 0}, 300);
+    $(".item1").animate({ width: 0}, 200);
     $(".item1").fadeOut( 100, function() { });
 
-    $(".item3").animate({ width: 0}, 300);
+    $(".item3").animate({ width: 0}, 200);
     $(".item3").fadeOut( 100, function() { });
 
-    $(".item5").animate({ width: 0}, 300);
+    $(".item5").animate({ width: 0}, 200);
     $(".item5").fadeOut( 100, function() { });
 
-    $(".item7").animate({ width: 0}, 300);
+    $(".item7").animate({ width: 0}, 200);
     $(".item7").fadeOut( 100, function() { });
+}
+
+function moveItem(item, left, right, top) {
+    $(item).animate({
+        left: $(window).width() * left,
+        top: $(window).height() * top,
+        right: $(window).width() * right
+    },
+        400
+    );
 }
 
 console.log(`Made by Stefan Jankovic`);
