@@ -27,7 +27,7 @@ let count = 0;
 // Controls the menu
 let navOpen = false;
 
-// 
+// Conditions for the responsive
 if(width >= 800) {
     fullWidth();
     menuDesktop();
@@ -79,31 +79,37 @@ function menuDesktop() {
         function() {
             if(navOpen == false) {
                 navOpen = true;
+                fullWidth();
                 console.log(`Nav open: ${navOpen}`);
                 openNav();
             }
             else { 
                 navOpen = false;
+                fullWidth();
                 console.log(`Nav open: ${navOpen}`);
                 closeNav();
             }
             
         }
     )
+    
 }
 function fullWidth() {
+
     $(".overlay").hover(
         function() {
-            reset = true;
-            count = 0;
-            $(".item").animate({width: $(window).width()* normal}, time - 100);
-            $(".item").children().css({'opacity': 0});
-            $(".item").clearQueue();
+            if(navOpen == false) {
+                reset = true;
+                count = 0;
+                $(".item").animate({width: $(window).width()* normal}, time - 100);
+                $(".item").children().css({'opacity': 0});
+                $(".item").clearQueue();
+            }
         }
     )
     $(".item").hover(
         function() {
-            if(reset == true) {
+            if(reset == true && navOpen == false) {
                 $(this).stop().animate({width: $(window).width()* medium}, time - 100);
                 $(".item").children().css({'opacity': 0});
             }
@@ -111,31 +117,35 @@ function fullWidth() {
     )
     $(".item").click(
         function() {
-            $(".item").children().css({'opacity': 0});
-            $(this).children().css({'opacity': 1});
-            
+            if(navOpen == false) {
+                $(".item").children().css({'opacity': 0});
+                $(this).children().css({'opacity': 1});
+            }
         }
     )
     $(".item").click( 
         function() {
-            count++;
-            reset = false;
-            if(count == 1) {
-                $(".item").stop().animate({width: $(window).width()* small}, time - 200);
-                $(this).stop().animate({width: $(window).width()* large}, time - 200);
-            }
-            else if(count == 2) {
-                $(".item").stop().animate({width: $(window).width()* normal}, time - 200);
-                $(".item").children().css({'opacity': 0});
-                count = 0;
-                reset = true;
+            if(navOpen == false) {
+                count++;
+                reset = false;
+                if(count == 1) {
+                    $(".item").stop().animate({width: $(window).width()* small}, time - 200);
+                    $(this).stop().animate({width: $(window).width()* large}, time - 200);
+                }
+                else if(count == 2) {
+                    $(".item").stop().animate({width: $(window).width()* normal}, time - 200);
+                    $(".item").children().css({'opacity': 0});
+                    count = 0;
+                    reset = true;
+                }
             }
         }
     );
+    
 }
 
 function openNav() {
-    AnimateRotate(45);
+    AnimateRotate(70);
     $(".container").stop().animate({
         width: $(window).width() * 0.2,
         height: $(window).width() * 0.2,
@@ -163,7 +173,7 @@ function closeNav() {
  function AnimateRotate(angle) {
     var $elem = $('.container');
     $({deg: 0}).animate({deg: angle}, {
-        duration: 2000,
+        duration: 1000,
         step: function(now) {
             $elem.css({
                 transform: 'rotate(' + now + 'deg)'
@@ -171,3 +181,6 @@ function closeNav() {
         }
     });
 }
+
+console.log(`Made by Stefan Jankovic`);
+console.log(`@stjankovic`);
