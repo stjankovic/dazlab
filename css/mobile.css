@@ -1,4 +1,19 @@
 @media screen and (max-width: 800px) {
+  nav img {
+    top: calc(6.5vh);
+    right: 14vw;
+  }
+  nav h1 {
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+    top: 4vh;
+    font-size: 3rem;
+    right: auto;
+    left: 14vw;
+    text-align: left;
+    width: 90vw;
+  }
   .container {
     top: 15vh !important;
     height: 80vh !important;
@@ -6,6 +21,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    left: 10vw;
   }
   .container .item {
     width: 100%;

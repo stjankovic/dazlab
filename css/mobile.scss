@@ -1,11 +1,30 @@
 @media screen and ( max-width: 800px ) {
+    nav {
+        img {
+            top: calc(6.5vh);
+            right: 14vw;
+        }
+        h1 {
+            writing-mode: horizontal-tb;
+            top: 4vh;
+            font-size: 3rem;
+            right: auto;
+            left: 14vw;
+            text-align: left;
+            width: 90vw;
+        }
+    }
     .container {
         top: 15vh !important;
         height: 80vh !important;
         flex-direction: column;
+        left: 10vw;
         .item {
             width: 100%;
             height: 10vh;
+            // Optional
+            // margin: 1px;
+            // border-radius: 10px;
         }
     }
 
