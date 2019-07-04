@@ -20,10 +20,10 @@
   .container {
     top: 15vh !important;
     height: 80vh !important;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
     left: 10vw;
   }
   .container .item {

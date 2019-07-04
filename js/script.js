@@ -27,13 +27,19 @@ let count = 0;
 // 
 if(width >= 800) {
     fullWidth();
+    menuDesktop();
 }
 else {
     mobileWidth();
+    menuMobile();
 }
 
 //All of the functions for Mobile screens;
+function menuMobile() {
+    
+}
 function mobileWidth() {
+    
     $(".item").click(
         function() {
             $(".item").children().css({'opacity': 0});
@@ -60,10 +66,18 @@ function mobileWidth() {
         function() {
             $(".item").stop().animate({height: $(window).height() * mobileNormal }, time - 200);
             $(".item").children().css({'opacity': 0});
+            count = 0;
         }
     );
 }
 //All of the functions for Desktop screens;
+function menuDesktop() {
+    $(".menu").click(
+        function() {
+            
+        }
+    )
+}
 function fullWidth() {
     $(".overlay").hover(
         function() {

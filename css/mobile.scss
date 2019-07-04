@@ -1,3 +1,4 @@
+// Large phones
 @media screen and ( max-width: 800px ) {
     .center-align-mobile {
         text-align: center !important;
@@ -20,7 +21,7 @@
     .container {
         top: 15vh !important;
         height: 80vh !important;
-        flex-direction: column;
+        flex-direction: column !important;
         left: 10vw;
         .item {
             width: 100%;
@@ -45,16 +46,4 @@
             }
         }
     }
-
-    
-
-
-
-
-
-
-
-
-
-
 }

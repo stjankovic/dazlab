@@ -45,7 +45,7 @@ nav img {
   height: 5vh;
   position: absolute;
   top: 5vh;
-  right: 5vw;
+  right: 80px;
 }
 
 nav h1 {
@@ -56,7 +56,7 @@ nav h1 {
   font-size: 7rem;
   position: absolute;
   top: 10vh;
-  right: 1vw;
+  right: 20px;
   margin: 0 !important;
 }
 
