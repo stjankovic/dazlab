@@ -24,6 +24,9 @@ let mobileLarge = 0.65;
 let reset = true;
 let count = 0;
 
+// Controls the menu
+let navOpen = false;
+
 // 
 if(width >= 800) {
     fullWidth();
@@ -72,8 +75,18 @@ function mobileWidth() {
 }
 //All of the functions for Desktop screens;
 function menuDesktop() {
-    $(".menu").click(
+    $(".menu-button").click(
         function() {
+            if(navOpen == false) {
+                navOpen = true;
+                console.log(`Nav open: ${navOpen}`);
+                openNav();
+            }
+            else { 
+                navOpen = false;
+                console.log(`Nav open: ${navOpen}`);
+                closeNav();
+            }
             
         }
     )
@@ -92,12 +105,6 @@ function fullWidth() {
         function() {
             if(reset == true) {
                 $(this).stop().animate({width: $(window).width()* medium}, time - 100);
-                $(".item").children().css({'opacity': 0});
-            }
-        },
-        function() {
-            if(reset == true) {
-                $(this).stop().animate({width: $(window).width()* normal}, time - 100);
                 $(".item").children().css({'opacity': 0});
             }
         }
@@ -125,4 +132,42 @@ function fullWidth() {
             }
         }
     );
+}
+
+function openNav() {
+    AnimateRotate(45);
+    $(".container").stop().animate({
+        width: $(window).width() * 0.2,
+        height: $(window).width() * 0.2,
+        left: $(window).width() * 0.4,
+        top: $(window).height() * 0.2
+    },
+        500
+    );
+   
+}
+function closeNav() {
+   
+    AnimateRotate(0);
+    $(".container").animate({
+        width: $(window).width() * 0.8,
+        height: $(window).height() * 0.9,
+        left: $(window).width() * 0.08,
+        top: $(window).height() * 0.05
+    },
+        500
+    );
+ 
+ }
+
+ function AnimateRotate(angle) {
+    var $elem = $('.container');
+    $({deg: 0}).animate({deg: angle}, {
+        duration: 2000,
+        step: function(now) {
+            $elem.css({
+                transform: 'rotate(' + now + 'deg)'
+            });
+        }
+    });
 }

@@ -18,13 +18,14 @@ nav {
         position: absolute;
         top: 5vh;
         right: 80px;
+        z-index: 999;
     }
     h1 {
         writing-mode: vertical-rl;
         text-orientation: mixed;
         font-size: 7rem;
         position: absolute;
-        top: 10vh;
+        top: 15vh;
         right: 20px;
         margin: 0 !important;
     }
