@@ -125,32 +125,4 @@ nav h1 {
 .hidden {
   display: none;
 }
-
-.links {
-  display: block !important;
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
-  text-orientation: mixed;
-  color: white;
-  font-size: 5vh;
-  text-decoration: none;
-  height: 100%;
-  width: 80%;
-  padding: 0 !important;
-  margin: 0 !important;
-  right: 5vh;
-  text-align: center;
-}
-
-.links-mobile {
-  display: block !important;
-  color: white;
-  font-size: 7vh;
-  text-decoration: none;
-  width: 100%;
-  padding: 0 !important;
-  margin: 0 !important;
-  text-align: center;
-}
 /*# sourceMappingURL=style.css.map */
