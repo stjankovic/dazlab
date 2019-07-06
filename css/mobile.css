@@ -53,11 +53,11 @@
     overflow-y: hidden !important;
   }
   .container .item .content h1 {
-    font-size: 1.7rem;
+    font-size: 4vh;
     text-align: center;
   }
   .container .item .content p {
-    font-size: 1.1rem;
+    font-size: 2vh;
     text-align: justify;
   }
 }
