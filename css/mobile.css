@@ -24,9 +24,28 @@
             flex-direction: column !important;
     left: 10vw;
   }
+  .container a {
+    -webkit-writing-mode: horizontal-tb !important;
+        -ms-writing-mode: lr-tb !important;
+            writing-mode: horizontal-tb !important;
+    text-orientation: mixed;
+    font-size: 3.5vh !important;
+    opacity: 0;
+    text-decoration: none;
+    color: black;
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 10vh !important;
+    margin-left: 3vw !important;
+  }
   .container .item {
     width: 100%;
     height: 10vh;
+    z-index: 999 !important;
   }
   .container .item .content {
     width: 90%;

@@ -28,16 +28,17 @@ let count = 0;
 let navOpen = false;
 let navOpenMobile = false;
 
-//Current angle for the container rotation
-let currentAngle = 0;
+let countNav = 0;
+let items = ['item1', 'item2', 'item3', 'item4', 'item5', 'item6', 'item7', 'item8'];
 
 // Conditions for the responsive
 if(width >= 800) {
     fullWidth();
+    Nav();
 }
 else {
     mobileWidth();
-    
+    mobileNav();
 }
 
 //All of the functions for Mobile screens;
@@ -53,6 +54,7 @@ function fullWidth() {
                 $(".item").children().css({'opacity': 0});
                 $(".item").clearQueue();
             }
+            
         }
     )
     $(".item").hover(
@@ -65,10 +67,15 @@ function fullWidth() {
     )
     $(".item").click(
         function() {
-            if(navOpen == false) {
-                $(".item").children().css({'opacity': 0});
-                $(this).children().css({'opacity': 1});
-            }
+            navOpen = false;
+            $(".item").children().css({'opacity': 0});
+            $(this).children().css({'opacity': 1});
+            $('a').addClass('hidden');
+            $('a').removeClass('visible');
+            $('a').css({'opacity': 0});
+            countNav = 0;
+            navOpen = false;
+                
         }
     )
     $(".item").click( 
@@ -85,19 +92,22 @@ function fullWidth() {
     
 }
 function mobileWidth() {
-    
+ 
     $(".item").click(
         function() {
             $(".item").children().css({'opacity': 0});
             $(this).children().css({'opacity': 1});
+            $('.item a').removeClass('visible');
+            $('.item a').addClass('hidden');
         }
     );
     $(".item").click(
         function() {
-   
-            reset = false;
             $(".item").stop().animate({height: $(window).height() * mobileSmall }, time - 200);
             $(this).stop().animate({height: $(window).height() * mobileLarge }, time - 200);
+            countNav = 0;
+            reset = false;
+        
             
     
         }
@@ -106,21 +116,61 @@ function mobileWidth() {
         function() {
             $(".item").animate({height: $(window).height() * mobileNormal }, time - 200);
             $(".item").children().css({'opacity': 0});
-            count = 0;
         }
     );
 }
-
+function resetContainer() {
+    $(".item").animate({height: $(window).height() * mobileNormal }, time - 200);
+    $(".item").children().css({'opacity': 0});
+}
 // Function to open the navigation
-function openNav() {
+function Nav() {
+    $('nav').click(
+        function () {
+           
+            countNav++;
+            if(countNav == 1) {
+                showItems();
+                navOpen = true;
+            }
+            else if(countNav == 2) {
+                countNav = 0;
+                navOpen = false;
+                hideItems();
+            }
+    });
 }
+function mobileNav() {
+    $("nav").click(
+        function() {
+            countNav++;
+            if(countNav == 1) {
+                resetContainer();
+                showItems();
+                navOpen = true;
+                
+            }
+            else if(countNav == 2) {
+                countNav = 0;
+                navOpen = false;
+                hideItems();
+            }
+        }
+    );
 
-// Function to close the navigation
-function closeNav() {
 }
-
 function showItems() {
-    $('a').fadeIn( 500, function() { });
+    $.each( items, function(i, val) {
+            $('.' + val + ' a').removeClass('hidden');
+            $('.' + val + ' a').addClass('visible');
+            $('.' + val + ' a').animate({opacity: 1}, 500);
+    });
+}
+function hideItems() {
+    $.each( items, function(i, val) {
+        $('.' + val + ' a').animate({opacity: 0}, 500);
+    });
+ 
 }
 
 // Made by:
