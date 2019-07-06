@@ -29,7 +29,6 @@ let navOpen = false;
 let navOpenMobile = false;
 
 let countNav = 0;
-let items = ['item1', 'item2', 'item3', 'item4', 'item5', 'item6', 'item7', 'item8'];
 
 // Conditions for the responsive
 if(width >= 800) {
@@ -40,7 +39,6 @@ else {
     mobileWidth();
     mobileNav();
 }
-
 //All of the functions for Mobile screens;
 function fullWidth() {
     $('.item').addClass('min-w');
@@ -54,7 +52,6 @@ function fullWidth() {
                 $(".item").children().css({'opacity': 0});
                 $(".item").clearQueue();
             }
-            
         }
     )
     $(".item").hover(
@@ -74,25 +71,20 @@ function fullWidth() {
             $('a').removeClass('visible');
             $('a').css({'opacity': 0});
             countNav = 0;
-            navOpen = false;
-                
+            navOpen = false;  
         }
     )
     $(".item").click( 
         function() {
             if(navOpen == false) {
                 reset = false;
-        
                 $(".item").stop().animate({width: $(window).width()* small}, time - 200);
                 $(this).stop().animate({width: $(window).width()* large}, time - 200);
-
             }
         }
     );
-    
 }
 function mobileWidth() {
- 
     $(".item").click(
         function() {
             $(".item").children().css({'opacity': 0});
@@ -107,9 +99,6 @@ function mobileWidth() {
             $(this).stop().animate({height: $(window).height() * mobileLarge }, time - 200);
             countNav = 0;
             reset = false;
-        
-            
-    
         }
     );
     $(".overlay").click(
@@ -127,7 +116,6 @@ function resetContainer() {
 function Nav() {
     $('nav').click(
         function () {
-           
             countNav++;
             if(countNav == 1) {
                 showItems();
@@ -148,7 +136,6 @@ function mobileNav() {
                 resetContainer();
                 showItems();
                 navOpen = true;
-                
             }
             else if(countNav == 2) {
                 countNav = 0;
@@ -157,22 +144,19 @@ function mobileNav() {
             }
         }
     );
-
 }
 function showItems() {
     $.each( items, function(i, val) {
-            $('.' + val + ' a').removeClass('hidden');
-            $('.' + val + ' a').addClass('visible');
-            $('.' + val + ' a').animate({opacity: 1}, 500);
+        $('.' + val + ' a').removeClass('hidden');
+        $('.' + val + ' a').addClass('visible');
+        $('.' + val + ' a').animate({opacity: 1}, 500);
     });
 }
 function hideItems() {
     $.each( items, function(i, val) {
         $('.' + val + ' a').animate({opacity: 0}, 500);
     });
- 
 }
-
 // Made by:
 console.log(`Made by Stefan Jankovic`);
 console.log(`@stjankovic`);
