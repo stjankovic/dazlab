@@ -74,18 +74,11 @@ function fullWidth() {
     $(".item").click( 
         function() {
             if(navOpen == false) {
-                count++;
                 reset = false;
-                if(count == 1) {
-                    $(".item").stop().animate({width: $(window).width()* small}, time - 200);
-                    $(this).stop().animate({width: $(window).width()* large}, time - 200);
-                }
-                else if(count == 2) {
-                    $(".item").stop().animate({width: $(window).width()* normal}, time - 200);
-                    $(".item").children().css({'opacity': 0});
-                    count = 0;
-                    reset = true;
-                }
+        
+                $(".item").stop().animate({width: $(window).width()* small}, time - 200);
+                $(this).stop().animate({width: $(window).width()* large}, time - 200);
+
             }
         }
     );
@@ -101,18 +94,12 @@ function mobileWidth() {
     );
     $(".item").click(
         function() {
-            count++;
+   
             reset = false;
-            console.log(`Count: ${count}`);
-            if(count == 1) {
-                $(".item").stop().animate({height: $(window).height() * mobileSmall }, time - 200);
-                $(this).stop().animate({height: $(window).height() * mobileLarge }, time - 200);
-            }
-            else if(count == 2) {
-                count = 0;
-                $(".item").stop().animate({height: $(window).height() * mobileNormal }, time - 200);
-                $(".item").children().css({'opacity': 0});
-            }
+            $(".item").stop().animate({height: $(window).height() * mobileSmall }, time - 200);
+            $(this).stop().animate({height: $(window).height() * mobileLarge }, time - 200);
+            
+    
         }
     );
     $(".overlay").click(
@@ -132,8 +119,8 @@ function openNav() {
 function closeNav() {
 }
 
-function showMobileItems() {
-    $(".item").fadeIn( 500, function() { });
+function showItems() {
+    $('a').fadeIn( 500, function() { });
 }
 
 // Made by:

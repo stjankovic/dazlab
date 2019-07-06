@@ -91,6 +91,8 @@ nav h1 {
 
 .container .item {
   width: calc(100vw/8);
+  height: 100%;
+  z-index: 999;
 }
 
 .container .item .content {

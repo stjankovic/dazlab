@@ -50,7 +50,8 @@ nav {
     flex-direction: row;
     .item {
         width: calc(100vw/8);
-        
+        height: 100%;
+        z-index: 999;
         .content {
             opacity: 0;
             display: flex;
