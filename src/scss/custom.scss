@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import 'colors.scss';
+@import 'items.scss';
+
+body {
+  padding: 0;
+  margin: 0 auto;
+  font-family: 'Lato', sans-serif;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+  cursor: default !important;
+}
+nav {
+    float: right;
+    img {
+        width: 5vh;
+        height: 5vh;
+        position: absolute;
+        top: 5vh;
+        right: 5vw;
+        z-index: 999;
+    }
+    h1 {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        font-size: 7vw;
+        position: relative;
+        top: 15vh;
+        right: 20px;
+        margin: 0 !important;
+    }
+}
+.overlay {
+    top: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 10 !important;
+    
+}
+.container {
+    overflow: hidden !important;
+    z-index: 50 !important;
+    top: 5vh;
+    left: 8vw;
+    width: 80vw;
+    height: 90vh;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    .item {
+        width: 10vw;
+        z-index: 30 !important;
+        overflow: hidden !important;
+        a {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-size: 3vw;
+            opacity: 0;
+            text-decoration: none;
+            color: black;
+            width: 100%;
+            height: 100%;
+            padding-top: 12vh;
+            line-height: 10vw;
+        }
+        .content {
+            // opacity: 0;
+            overflow: hidden !important;
+            z-index: 7 !important;
+            width: 50%;
+            position: absolute;
+            margin-top: 8vh;
+            margin-left: 10vw;
+            h1 {
+                z-index: 7 !important;
+                font-size: 5vh;
+                overflow: hidden !important;
+                margin-bottom: 0;
+            }
+            p {
+                z-index: 7 !important;
+                overflow: hidden !important;
+                font-size: 2.5vh;
+            }
+        }
+    }
+}
+.min-w {
+    min-width: 30px;
+}
+.hidden {
+    display: none;
+}
+.visible {
+    display: flex !important;
+    z-index: 4;
+}
