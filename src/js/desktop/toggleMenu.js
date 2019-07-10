@@ -1,4 +1,4 @@
-import { showItems, hideItems } from './toggleItems';
+import { showItems, hideItems } from '../toggleItems';
 import { setCond, cond } from './constants';
 
 let toggleMenu = () => {
