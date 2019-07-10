@@ -26,7 +26,7 @@
 ## Download and Install
 
 Let's go!
-
+```
 $ git clone https://github.com/stjankovic/dazlab.git
 $ cd dazlab
 $ yarn // or npm install
