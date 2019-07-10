@@ -21,7 +21,7 @@
         height: 80vh !important;
         flex-direction: column !important;
         left: 10vw;
-        a {
+        span {
             writing-mode: horizontal-tb !important;
             text-orientation: mixed;
             font-size: 3.5vh !important;
@@ -42,6 +42,7 @@
             .content {
                 width: 90%;
                 left: 5%;
+                margin-left: 1vw !important;
                 overflow-y: hidden !important;
                 h1 {
                     font-size: 4vh;

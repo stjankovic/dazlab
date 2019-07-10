@@ -2,15 +2,15 @@ let n = 8;
 
 let showItems = () => {
   for (let i = 1; i <= n; i++) {
-    $('.item' + i + ' a').removeClass('hidden');
-    $('.item' + i + ' a').addClass('visible');
-    $('.item' + i + ' a').animate({ opacity: 1 }, 500);
+    $('.item' + i + ' span').removeClass('hidden');
+    $('.item' + i + ' span').addClass('visible');
+    $('.item' + i + ' span').animate({ opacity: 1 }, 500);
   }
 };
 
 let hideItems = () => {
   for (let i = 1; i <= n; i++) {
-    $('.item' + i + ' a').animate({ opacity: 0 }, 500);
+    $('.item' + i + ' span').animate({ opacity: 0 }, 500);
   }
 };
 

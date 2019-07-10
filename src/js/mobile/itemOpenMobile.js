@@ -8,8 +8,8 @@ let itemOpenMobile = () => {
       setCond(false);
       hideItems();
       delay(500).then(() => {
-        $('.item a').removeClass('visible');
-        $('.item a').addClass('hidden');
+        $('.item span').removeClass('visible');
+        $('.item span').addClass('hidden');
         $(this)
           .children()
           .css({ opacity: 1 });
@@ -21,8 +21,8 @@ let itemOpenMobile = () => {
           .animate({ height: $(window).height() * large }, time);
       });
     } else {
-      $('.item a').removeClass('visible');
-      $('.item a').addClass('hidden');
+      $('.item span').removeClass('visible');
+      $('.item span').addClass('hidden');
       $(this)
         .children()
         .css({ opacity: 1 });

@@ -8,8 +8,8 @@ let itemOpen = () => {
       setCond(false);
       hideItems();
       delay(500).then(() => {
-        $('.item a').removeClass('visible');
-        $('.item a').addClass('hidden');
+        $('.item span').removeClass('visible');
+        $('.item span').addClass('hidden');
         $(this)
           .children()
           .css({ opacity: 1 });
@@ -21,8 +21,8 @@ let itemOpen = () => {
           .animate({ width: $(window).width() * large }, time);
       });
     } else {
-      $('.item a').removeClass('visible');
-      $('.item a').addClass('hidden');
+      $('.item span').removeClass('visible');
+      $('.item spaspan').addClass('hidden');
       $(this)
         .children()
         .css({ opacity: 1 });
