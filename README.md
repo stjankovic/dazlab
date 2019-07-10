@@ -1,6 +1,6 @@
 # dazlab.io - with Babel
 
-> Build landing page with **Boostrap** and **jQuery** is so easy.
+> Build landing page with **jQuery** is so easy.
 
 <a target="_blank" href="https://opensource.org/licenses/MIT" title="License: MIT">
   <img src="https://img.shields.io/badge/License-MIT-blue.svg">
