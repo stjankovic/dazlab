@@ -1,5 +1,16 @@
 // Large phones
 @media screen and ( max-width: 800px ) {
+    body {
+        max-height: 100vh !important;
+    }
+    .block {
+        position: fixed;
+        background-color: white;
+        bottom: 0px;
+        width: 100%;
+        top: 87.5vh;
+        z-index: 999 !important;
+    }
     .center-align-mobile {
         text-align: center !important;
     }
@@ -16,41 +27,51 @@
             left: 12vw;
         }
     }
+    .overlay {
+        z-index: 11 !important;
+    }
     .container {
         top: 15vh !important;
         height: 80vh !important;
         flex-direction: column !important;
         left: 10vw;
-        span {
-            writing-mode: horizontal-tb !important;
-            text-orientation: mixed;
-            font-size: 3.5vh !important;
-            opacity: 0;
-            text-decoration: none;
-            color: black;
-            width: fit-content !important;
-            height: 100%;
-            margin: 0 !important;
-            padding: 0 !important;
-            line-height: 10vh !important;
-            margin-left: 3vw !important;
-        }
+        overflow: hidden !important;
+        z-index: 15 !important;
+        
         .item {
             width: 100%;
             height: 10vh;
-            z-index: 999 !important;
+            overflow: hidden !important;
+            z-index: 13 !important;
+            span {
+                writing-mode: horizontal-tb !important;
+                text-orientation: mixed;
+                font-size: 3.5vh !important;
+                opacity: 0;
+                text-decoration: none;
+                color: black;
+                width: fit-content !important;
+                height: 100%;
+                margin: 0 !important;
+                padding: 0 !important;
+                line-height: 10vh !important;
+                margin-left: 3vw !important;
+            }
             .content {
                 width: 90%;
                 left: 5%;
                 margin-left: 1vw !important;
-                overflow-y: hidden !important;
+                overflow: hidden !important;
+                z-index: 7 !important;
                 h1 {
                     font-size: 4vh;
                     text-align: center;
+                    overflow: hidden !important;
                 }
                 p {
                     font-size: 2vh;
                     text-align: justify;
+                    overflow: hidden !important;
                 }
             }
         }

@@ -2,7 +2,7 @@
   "name": "dazlab-2.0",
   "license": "MIT",
   "author": "@stjankovic",
-  "version": "1.6.4",
+  "version": "2.0.0",
   "scripts": {
     "build": "webpack -p --progress --mode production --config webpack.config.js",
     "predeploy": "npm run build",
