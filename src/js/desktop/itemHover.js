@@ -1,15 +1,51 @@
-import { itemCond, cond, time, normal, medium } from './constants';
+import {
+  itemCond,
+  cond,
+  time,
+  normal,
+  medium,
+  smedium,
+  lmedium,
+} from './constants';
 
 let itemHover = () => {
   $('.item').hover(
     function() {
+      let idItem = Number.parseInt(this.id, 10);
+      let nextidItem = idItem + 1;
+      let previdItem = idItem - 1;
+
+      console.log(`Current: ${idItem}`);
+      console.log(`Next: ${nextidItem}`);
+      console.log(`Previous: ${previdItem}`);
+
       if (cond == false && itemCond == false) {
-        $('.item')
-          .stop()
-          .animate({ width: $(window).width() * normal }, time);
-        $(this)
-          .stop()
-          .animate({ width: $(window).width() * medium }, time);
+        if (idItem == 1) {
+          $('#' + idItem)
+            .stop()
+            .animate({ width: $(window).width() * medium }, time);
+          $('#' + nextidItem)
+            .stop()
+            .animate({ width: $(window).width() * smedium }, time);
+        } else if (idItem < 8) {
+          $('#' + idItem)
+            .stop()
+            .animate({ width: $(window).width() * lmedium }, time);
+          $('#' + previdItem)
+            .stop()
+            .animate({ width: $(window).width() * smedium }, time);
+
+          $('#' + nextidItem)
+            .stop()
+            .animate({ width: $(window).width() * smedium }, time);
+        } else {
+          $('#' + idItem)
+            .stop()
+            .animate({ width: $(window).width() * medium }, time);
+          $('#' + previdItem)
+            .stop()
+            .animate({ width: $(window).width() * smedium }, time);
+        }
       }
     },
     function() {

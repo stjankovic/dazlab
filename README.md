@@ -15,6 +15,12 @@
 #### 🤩 SCSS
 
 
+## Desktop
+![Desktop](https://i.ibb.co/sjYYmkh/Untitled.png)
+
+## Mobile
+![Mobile](https://i.ibb.co/2N7tpgr/Untitled.png)
+
 ## Features
 
 - **jQuery** installed
