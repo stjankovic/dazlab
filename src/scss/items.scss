@@ -1,8 +1,31 @@
-.item1 { background-color: $yellow; }
-.item2 { background-color: $pink;   }
-.item3 { background-color: $dgreen; }
-.item4 { background-color: $lgreen; }
-.item5 { background-color: $brown;  }
-.item6 { background-color: $dblue;  }
-.item7 { background-color: $red;    }
-.item8 { background-color: $lbrown; }
+.item1 { 
+    background-color: $yellow;
+}
+.item2 { 
+    background-color: $pink;
+    // left: 10vw;
+}
+.item3 { 
+    background-color: $dgreen;
+    // left: 20vw;
+}
+.item4 { 
+    background-color: $lgreen;
+    // left: 30vw;
+}
+.item5 { 
+    background-color: $brown;
+    // left: 40vw;
+}
+.item6 { 
+    background-color: $dblue;
+    left: 50vw;
+}
+.item7 { 
+    background-color: $red;
+    left: 60vw;
+}
+.item8 { 
+    background-color: $lbrown;
+    left: 70vw;
+}

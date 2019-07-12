@@ -47,11 +47,14 @@ nav {
     height: 90vh;
     position: absolute;
     display: flex;
+    float: left;
     flex-direction: row;
+    box-sizing: border-box;
     .item {
         width: 10vw;
         z-index: 30 !important;
-        overflow: hidden !important;
+        height: 100%;
+        overflow: visible !important;
         span {
             writing-mode: vertical-rl;
             text-orientation: mixed;
@@ -71,7 +74,7 @@ nav {
             width: 50%;
             position: absolute;
             margin-top: 8vh;
-            margin-left: 10vw;
+            margin-left: 15vw;
             h1 {
                 z-index: 7 !important;
                 font-size: 5vh;

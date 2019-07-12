@@ -1,9 +1,10 @@
-import { setCond, cond, small, large, time } from './constants';
+import { setItem, setCond, cond, small, large, time } from './constants';
 import { hideItems } from '../toggleItems';
 import delay from '../delay';
 
 let itemOpen = () => {
   $('.item').click(function() {
+    setItem(true);
     if (cond == true) {
       setCond(false);
       hideItems();

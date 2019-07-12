@@ -1,9 +1,9 @@
-import { cond, time, normal, medium } from './constants';
+import { itemCond, cond, time, normal, medium } from './constants';
 
 let itemHover = () => {
   $('.item').hover(
     function() {
-      if (cond == false) {
+      if (cond == false && itemCond == false) {
         $('.item')
           .stop()
           .animate({ width: $(window).width() * normal }, time);
@@ -13,8 +13,7 @@ let itemHover = () => {
       }
     },
     function() {
-      if (cond == false) {
-        $(this).removeClass('item-hover');
+      if (cond == false && itemCond == false) {
         $('.item')
           .stop()
           .animate({ width: $(window).width() * normal }, time);
