@@ -1,11 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 @import 'colors.scss';
 @import 'items.scss';
+
+@font-face {
+    font-family: 'HelveticaNeue-Medium';
+    src: url("../fonts/HelveticaNeue-Medium.otf") format("opentype");
+}
 
 body {
   padding: 0;
   margin: 0 auto;
-  font-family: 'Lato', sans-serif;
   overflow-y: hidden !important;
   overflow-x: hidden !important;
   cursor: default !important;
@@ -28,6 +31,7 @@ nav {
         top: 15vh;
         right: 20px;
         margin: 0 !important;
+        font-family: 'HelveticaNeue-Medium';
     }
 }
 .overlay {
@@ -80,11 +84,13 @@ nav {
                 font-size: 5vh;
                 overflow: hidden !important;
                 margin-bottom: 0;
+                font-family: 'HelveticaNeue-Medium';
             }
             p {
                 z-index: 7 !important;
                 overflow: hidden !important;
                 font-size: 2.5vh;
+                font-family: 'HelveticaNeue-Medium';
             }
         }
     }
