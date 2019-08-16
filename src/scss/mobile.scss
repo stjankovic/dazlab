@@ -8,7 +8,7 @@
         background-color: white;
         bottom: 0px;
         width: 100%;
-        top: 87.5vh;
+        top: 95vh;
         z-index: 999 !important;
     }
     .center-align-mobile {
@@ -22,9 +22,15 @@
         h1 {
             writing-mode: horizontal-tb;
             top: 5.5vh;
+            margin-top: 5.5vh !important;
             font-size: 5vh;
             position: absolute;
             left: 12vw;
+            span {
+                position: relative;
+                top: 0;
+                left: 0;
+            }
         }
     }
     .overlay {

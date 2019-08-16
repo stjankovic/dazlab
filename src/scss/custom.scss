@@ -24,14 +24,32 @@ nav {
         z-index: 999;
     }
     h1 {
+        // background-color: red;
+
+        // width: 12vw !important;
+        // height: 100vh !important;
+
         writing-mode: vertical-rl;
         text-orientation: mixed;
+
         font-size: 7vw;
-        position: relative;
-        top: 15vh;
-        right: 20px;
-        margin: 0 !important;
+        margin-left: 1.9vw;
+        margin-right: 1.9vw;
+        margin-top: 17vh;
+
+        padding: 0 !important;
+        position: absolute;
+        top: 0vh !important;
+        right: 0vw !important;
+        letter-spacing: 1vh;
+
         font-family: 'HelveticaNeue-Medium';
+        span {
+            // color: white;
+            position: absolute;
+            top: -3vh;
+            left: 0.7vw;
+        }
     }
 }
 .overlay {
@@ -60,6 +78,7 @@ nav {
         height: 100%;
         overflow: visible !important;
         span {
+            font-family: 'HelveticaNeue-Medium';
             writing-mode: vertical-rl;
             text-orientation: mixed;
             font-size: 3vw;
@@ -78,7 +97,7 @@ nav {
             width: 50%;
             position: absolute;
             margin-top: 8vh;
-            margin-left: 15vw;
+            margin-left: 12vw;
             h1 {
                 z-index: 7 !important;
                 font-size: 5vh;
