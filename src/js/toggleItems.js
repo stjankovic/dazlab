@@ -11,6 +11,10 @@ let showItems = () => {
 let hideItems = () => {
   for (let i = 1; i <= n; i++) {
     $('.item' + i + ' span').animate({ opacity: 0 }, 500);
+    setTimeout(() => {
+      $('.item' + i + ' span').addClass('hidden');
+      $('.item' + i + ' span').removeClass('visible');
+    }, 500);
   }
 };
 

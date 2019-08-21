@@ -15,10 +15,6 @@ let itemHover = () => {
       let nextidItem = idItem + 1;
       let previdItem = idItem - 1;
 
-      console.log(`Current: ${idItem}`);
-      console.log(`Next: ${nextidItem}`);
-      console.log(`Previous: ${previdItem}`);
-
       if (cond == false && itemCond == false) {
         if (idItem == 1) {
           $('#' + idItem)

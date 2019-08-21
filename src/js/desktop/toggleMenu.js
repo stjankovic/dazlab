@@ -11,6 +11,9 @@ let toggleMenu = () => {
       showItems();
     } else {
       setCond(false);
+      $('.item')
+        .stop()
+        .animate({ width: $(window).width() * normal }, time - 200);
       hideItems();
     }
   });
